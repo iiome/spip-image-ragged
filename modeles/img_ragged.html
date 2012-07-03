@@ -1,0 +1,19 @@
+[(#REM)
+Modele: img_ragged.html
+
+ Copyright Arnaud Martin
+
+ Filtre trouve sur paris-beyrouth:
+ http://www.paris-beyrouth.org/Un-habillage-irregulier-2
+
+ integre en plugin par Pierre Andrews
+
+Utilisation:
+<img234|ragged>
+<img234|ragged|left> pour specifier l'alignement (droite ou gauche)
+<img234|ragged|margin=100> pour specifier la marge autour de l'image
+<img234|ragged|couleur> pour specifier la couleur de fond à decouper. Si on n'en specifie pas, on detoure le transparent.
+
+]<BOUCLE_doc(DOCUMENTS){id_document}{tous}>
+ [(#FICHIER|image_ragged{#ENV{align,left},#ENV{margin},#ENV{couleur,#ENV{color,#ENV{colour}}}})]
+</BOUCLE_doc>

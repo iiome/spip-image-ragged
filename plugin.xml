@@ -1,0 +1,24 @@
+<plugin>
+	<nom>Image Ragged</nom>
+	<slogan>Habiller une image de mani&#232;re irr&#233;guli&#232;re.</slogan>
+	<auteur>Arnaud Martin, int&#233;gr&#233; en plugin par Pierre Andrews (Mortimer)</auteur>
+	<version>0.2.0</version>
+	<etat>stable</etat>
+	<description>
+Filtre trouv&#233; sur [paris-beyrouth->http://www.paris-beyrouth.org/Un-habillage-irregulier-2].
+
+Utilisation :
+-* <code><img234|ragged></code>
+-* <code><img234|ragged|left></code> pour sp&#233;cifier l'alignement (droite ou gauche)
+-* <code><img234|ragged|margin=100></code> pour sp&#233;cifier la marge autour de l'image
+-* <code><img234|ragged|couleur></code> pour sp&#233;cifier la couleur de fond &#224; d&#233;couper. Si on n'en sp&#233;cifie pas, on d&#233;toure le transparent.
+	</description>
+	<icon>image_ragged.png</icon>
+	<lien>http://www.spip-contrib.net/Un-habillage-irregulier</lien>
+	<fonctions> <!-- fichier charge a chaque recalul de page -->
+	image_ragged_filtre.php
+	</fonctions>
+	<prefix>image_ragged</prefix>
+	<necessite id="SPIP" version="[1.9.0;2.1.99]" />
+	<categorie>multimedia</categorie>
+</plugin>
