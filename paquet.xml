@@ -1,0 +1,16 @@
+<paquet
+        prefix="image_ragged"
+        categorie="multimedia"
+        version="0.3.0"
+        etat="stable"
+        compatibilite="[3.0.0;3.0.*]"
+        logo="images/image_ragged.png"
+>       
+
+        <nom>Image Ragged</nom>
+        <!-- Filtres de transformation d'image et de couleurs -->
+
+        <auteur>Guillaume Bisch</auteur>
+
+        <licence lien="http://www.gnu.org/licenses/gpl-3.0.html">GPL</licence>
+</paquet>

@@ -10,6 +10,7 @@
 function image_ragged ($img, $align, $margin=10, $coul=-1) {
 
   include_spip("inc/filtres_images");
+  include_spip("ing/filtres_images_lib_mini");
   if (strlen($coul) == 6) {
 	$couleurs = couleur_hex_to_dec($coul);
 	$dr= $couleurs["red"];
@@ -19,12 +20,12 @@ function image_ragged ($img, $align, $margin=10, $coul=-1) {
   }
   else $placer_fond = false;
 
-  $image = image_valeurs_trans($img, "float-$align$coul$margin", "php");
+  $image = _image_valeurs_trans($img, "float-$align$coul$margin", "php");
   if (!$image) return("");
 
   $w = $image["largeur"];
   $h = $image["hauteur"];
-  $precision = round($h / 5);
+  $precision = round($h / 20);
 	
   $im = $image["fichier"];
   $dest = $image["fichier_dest"];
@@ -37,7 +38,7 @@ function image_ragged ($img, $align, $margin=10, $coul=-1) {
   if ($creer) {
 	include_spip('inc/logos'); // bicoz presence reduire_image
 	$im_n = extraire_attribut(image_reduire($im, 0, $precision), "src");
-	$nouveau = image_valeurs_trans($im_n, "reduction-$precision");
+	$nouveau = _image_valeurs_trans($im_n, "reduction-$precision");
 	$im_n = $nouveau["fichier"];
 		
 	$x_i = $nouveau["largeur"];
